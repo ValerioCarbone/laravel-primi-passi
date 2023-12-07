@@ -9,7 +9,8 @@
 
 <body>
     <div>
-        <h1>Hello World</h1>
+        <h1>{{ $title }}</h1>
+        <p>{{ $user }}</p>
     </div>
 </body>
 
