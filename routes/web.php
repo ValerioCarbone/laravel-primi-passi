@@ -16,8 +16,23 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $data = [
         'title' => "Home",
-        'user' => "Valerio"
+        'user' => "Valerio",
+        'item' => "Pippo",
+        'item_1' => "Pluto",
+        'item_2' => 'Paperino'
 
     ];
     return view('home', $data);
-});
+})->name('home');
+
+Route::get('/info', function () {
+    $data = [
+        "info" => [
+            'item' => "Pippo",
+            'item_1' => "Pluto",
+            'item_2' => 'Paperino'
+        ]
+
+    ];
+    return view('info', $data);
+})->name('info');
